@@ -1,0 +1,11 @@
+.bule {
+  color: #0091ff;
+}
+:global(.title) {
+  color: green;
+}
+
+:global(.page-root-title) {
+  padding-left: 8px;
+  border-left: 3px solid #ff9125;
+}
