@@ -1,4 +1,5 @@
 // import logo from './logo.svg';
+import { Button } from 'antd';
 import './styles/App.css';
 import img from './asd.jpg'
 import style from './styles/index.module.css'
@@ -10,6 +11,11 @@ import Contains from './pages/comp-types/Contains'
 import LifCyclePage from './pages/LifeCyclePage';
 import ReduxPage from './pages/redux-demo/ReduxPage';
 import ReactRedux from './pages/redux-demo/ReactRedux';
+import ReactRoutePage from './pages/router/RouterPage';
+import ReactRoutePage2 from './pages/router/RouterPage2';
+// NavLinkRute
+// import NavLinkRoute from './pages/router/NavLinkRoute';
+import HookPage from './pages/hook-page/EffectHook'
 // const girlJpg = fs.path.resolve(paths.appPublic, '/image/枫叶与女孩.jpg')
 
 // ** 基本使用
@@ -34,6 +40,7 @@ const jsx = (
         arr.map((item, index) =>
           <li key={item + index}>
             经典中的经典{item}
+            {index===0&&<Button  type="primary">按钮测试</Button>}
           </li>
         )
       }
@@ -95,6 +102,15 @@ function App() {
       <ReduxPage />
       <h3 className="page-root-title">react-redux</h3>
       <ReactRedux />
+      <h3 className="page-root-title">react-router</h3>
+      <ReactRoutePage />
+      <ReactRoutePage2 />
+      <p>navLink</p>
+      {/* <NavLinkRoute /> */}
+
+      <h3 className="page-root-title">hook</h3>
+
+      <HookPage />
     </div>
   );
 }
